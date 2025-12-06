@@ -13,12 +13,10 @@ const hostname = '127.0.0.1';
 // Custom server with Socket.IO integration
 async function createCustomServer() {
   try {
-    // Create Next.js app
+    // Create Next.js app - Next.js 16 compatible
     const nextApp = next({ 
       dev,
       dir: process.cwd(),
-      // In production, use the current directory where .next is located
-      conf: dev ? undefined : { distDir: './.next' }
     });
 
     await nextApp.prepare();
